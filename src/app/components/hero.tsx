@@ -1,0 +1,167 @@
+import { useState } from "react";
+import imgPeople from "figma:asset/2108354b80ceaa608fa1fc4709e4197af793e1cb.png";
+import imgFood from "figma:asset/9e68f8793e6f67c0fd5130f78ea97da9bed1c275.png";
+
+export function Hero() {
+  const [email, setEmail] = useState("");
+  const [submitted, setSubmitted] = useState(false);
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    if (email) setSubmitted(true);
+  };
+
+  return (
+    <section className="pt-28 pb-20 px-6" style={{ background: "#faf6ee" }}>
+      <div className="max-w-[960px] mx-auto">
+        {/* Two-column layout */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-16 items-center">
+          {/* Left: copy */}
+          <div>
+            <p
+              style={{ fontFamily: "Kalam, cursive", color: "#a04e33" }}
+              className="text-[22px] mb-3 -ml-0.5"
+            >
+              welcome —
+            </p>
+
+            <h1
+              style={{
+                fontFamily: "Newsreader, serif",
+                color: "#2a1f16",
+                letterSpacing: "-1.8px",
+                lineHeight: "1.02",
+              }}
+              className="text-[clamp(52px,7vw,76px)] font-normal mb-6"
+            >
+              Come eat with us.
+            </h1>
+
+            <p
+              style={{ fontFamily: "Newsreader, serif", color: "#574638", lineHeight: "1.7" }}
+              className="text-[18px] mb-8"
+            >
+              For over three years, I've hosted a monthly dinner in{" "}
+              <em>Bed–Stuy</em> — a long table of eight, a seasonal menu, and
+              an evening to slow down and connect over food and good
+              conversation.
+            </p>
+
+            {/* Social proof */}
+            <div
+              className="flex flex-wrap gap-x-6 gap-y-2 mb-10 pb-10"
+              style={{ borderBottom: "1px solid rgba(42,31,22,0.12)" }}
+            >
+              {[
+                { stat: "40+", label: "dinners hosted" },
+                { stat: "300+", label: "strangers turned friends" },
+                { stat: "Since 2022", label: "in Bed–Stuy" },
+              ].map(({ stat, label }) => (
+                <div key={stat}>
+                  <span
+                    style={{ fontFamily: "Newsreader, serif", color: "#2a1f16" }}
+                    className="text-[20px] font-normal"
+                  >
+                    {stat}
+                  </span>
+                  <span
+                    style={{ fontFamily: "Newsreader, serif", color: "#8c7b6b" }}
+                    className="text-[15px] ml-1.5"
+                  >
+                    {label}
+                  </span>
+                </div>
+              ))}
+            </div>
+
+            {/* Primary CTA — email signup */}
+            <div>
+              <p
+                style={{ fontFamily: "Kalam, cursive", color: "#a04e33" }}
+                className="text-[18px] mb-3"
+              >
+                hear about the next one
+              </p>
+              {submitted ? (
+                <p
+                  style={{ fontFamily: "Newsreader, serif", color: "#574638", lineHeight: "1.6" }}
+                  className="text-[17px] italic"
+                >
+                  You're on the list. I'll be in touch when the next dinner is set. ✦
+                </p>
+              ) : (
+                <form onSubmit={handleSubmit} className="flex gap-2 flex-wrap sm:flex-nowrap">
+                  <input
+                    type="email"
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
+                    placeholder="your@email.com"
+                    required
+                    className="flex-1 min-w-0 px-4 py-3 rounded-full text-[16px] outline-none"
+                    style={{
+                      fontFamily: "Newsreader, serif",
+                      background: "rgba(235,226,208,0.5)",
+                      border: "1px solid rgba(42,31,22,0.15)",
+                      color: "#2a1f16",
+                    }}
+                  />
+                  <button
+                    type="submit"
+                    className="shrink-0 px-6 py-3 rounded-full text-[16px] transition-opacity hover:opacity-90"
+                    style={{
+                      fontFamily: "Newsreader, serif",
+                      background: "#2a1f16",
+                      color: "#f4eee2",
+                    }}
+                  >
+                    Join the list →
+                  </button>
+                </form>
+              )}
+              <p
+                style={{ fontFamily: "Newsreader, serif", color: "#8c7b6b" }}
+                className="text-[14px] italic mt-2.5 ml-1"
+              >
+                One short note a month. No noise.
+              </p>
+            </div>
+          </div>
+
+          {/* Right: photos stacked with offset */}
+          <div className="relative hidden md:block" style={{ height: "520px" }}>
+            <div
+              className="absolute inset-0 rounded-[12px] overflow-hidden shadow-[0_24px_64px_-16px_rgba(42,31,22,0.3)] transition-transform duration-300 hover:scale-[1.02]"
+              style={{ top: "20px", right: "0", left: "24px" }}
+            >
+              <img
+                src={imgPeople}
+                alt="Guests around the table at a Brooklyn Supper"
+                className="w-full h-full object-cover"
+              />
+            </div>
+            {/* Small accent photo */}
+            <div
+              className="absolute w-[160px] h-[200px] rounded-[10px] overflow-hidden shadow-[0_16px_40px_-8px_rgba(42,31,22,0.35)] transition-transform duration-300 hover:scale-105 hover:rotate-[-2deg]"
+              style={{ bottom: "-8px", left: "-12px", zIndex: 10 }}
+            >
+              <img
+                src={imgFood}
+                alt="A dish from the table"
+                className="w-full h-full object-cover"
+              />
+            </div>
+          </div>
+        </div>
+
+        {/* Mobile image */}
+        <div className="md:hidden mt-10 rounded-[12px] overflow-hidden shadow-[0_20px_60px_-20px_rgba(42,31,22,0.3)] h-[260px]">
+          <img
+            src={imgPeople}
+            alt="Guests around the table at a Brooklyn Supper"
+            className="w-full h-full object-cover"
+          />
+        </div>
+      </div>
+    </section>
+  );
+}

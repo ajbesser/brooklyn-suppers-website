@@ -1,0 +1,102 @@
+const items = [
+  {
+    bold: "7pm-ish.",
+    rest: "Come hungry. There's usually bread and something to start.",
+  },
+  {
+    bold: "A themed menu",
+    rest: ", three or four courses, served family-style.",
+  },
+  {
+    bold: "Wine pairings",
+    rest: " throughout. Bring a bottle if you'd like to share.",
+  },
+  {
+    bold: "Around midnight,",
+    rest: " the last of us are still at the table. No rush.",
+  },
+  {
+    bold: "Bed–Stuy,",
+    rest: " Brooklyn. Exact address comes once you're in.",
+  },
+];
+
+export function WhatToExpect() {
+  return (
+    <section className="py-24 px-6" style={{ background: "#faf6ee" }}>
+      <div className="max-w-[960px] mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-start">
+          {/* Right side: heading + list */}
+          <div className="md:order-2">
+            <p
+              style={{ fontFamily: "Kalam, cursive", color: "#a04e33" }}
+              className="text-[22px] mb-4 -ml-0.5"
+            >
+              what to expect
+            </p>
+
+            <h2
+              style={{
+                fontFamily: "Newsreader, serif",
+                color: "#2a1f16",
+                letterSpacing: "-1px",
+                lineHeight: "1.1",
+              }}
+              className="text-[clamp(36px,4.5vw,48px)] font-normal mb-12"
+            >
+              A long evening,{" "}
+              <em style={{ color: "#574638" }}>mostly.</em>
+            </h2>
+
+            <div className="space-y-8">
+              {items.map(({ bold, rest }, i) => (
+                <div key={i} className="flex gap-5 items-start">
+                  <span
+                    style={{ fontFamily: "Kalam, cursive", color: "#a04e33", lineHeight: "1.6" }}
+                    className="text-[24px] shrink-0 mt-0.5"
+                  >
+                    ~
+                  </span>
+                  <p
+                    style={{ fontFamily: "Newsreader, serif", lineHeight: "1.65" }}
+                    className="text-[18px]"
+                  >
+                    <strong style={{ color: "#2a1f16", fontWeight: 400 }}>{bold}</strong>
+                    <span style={{ color: "#574638" }}>{rest}</span>
+                  </p>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* Left side: decorative quote */}
+          <div className="md:order-1 flex flex-col justify-center">
+            <blockquote
+              className="relative"
+              style={{ borderLeft: "2px solid rgba(160,78,51,0.3)", paddingLeft: "24px" }}
+            >
+              <p
+                style={{
+                  fontFamily: "Newsreader, serif",
+                  color: "#574638",
+                  lineHeight: "1.65",
+                  fontStyle: "italic",
+                }}
+                className="text-[22px]"
+              >
+                "You arrive as a stranger and leave feeling like you've known
+                everyone at the table for years. That's the whole point."
+              </p>
+              <footer
+                style={{ fontFamily: "Kalam, cursive", color: "#8c7b6b" }}
+                className="text-[17px] mt-4"
+              >
+                — a returning guest
+              </footer>
+            </blockquote>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
