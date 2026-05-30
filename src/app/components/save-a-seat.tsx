@@ -32,13 +32,22 @@ export function SaveASeat() {
           <p>
             RSVP opens monthly via email to our mailing list. Each dinner is
             unique — with details about the menu, date, and theme sent directly
-            to subscribers when seats become available.
+            to subscribers when seats become available. The full RSVP asks for
+            dietary notes, guest count, and anything helpful to know before you
+            come over.
           </p>
 
           <p>
             Dinners are limited to eight guests, so spots fill quickly. Join
             the list below to be the first to know when the next dinner is
-            announced.
+            announced. The apartment address is shared after a seat is
+            confirmed, not on the public site.
+          </p>
+
+          <p>
+            If the table is full, you'll stay on the list for the next opening.
+            No pressure, no spam, just a monthly note when there is something
+            to gather around.
           </p>
         </div>
 

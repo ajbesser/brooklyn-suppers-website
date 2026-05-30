@@ -5,6 +5,7 @@ import imgFood from "figma:asset/9e68f8793e6f67c0fd5130f78ea97da9bed1c275.png";
 export function Hero() {
   const [email, setEmail] = useState("");
   const [submitted, setSubmitted] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -12,6 +13,7 @@ export function Hero() {
 
     // Submit to Mailchimp
     const form = e.target as HTMLFormElement;
+    setIsSubmitting(true);
     try {
       await fetch(form.action, {
         method: 'POST',
@@ -22,6 +24,8 @@ export function Hero() {
     } catch (error) {
       // Even if fetch fails due to CORS, the form still submits successfully
       setSubmitted(true);
+    } finally {
+      setIsSubmitting(false);
     }
   };
 
@@ -57,8 +61,8 @@ export function Hero() {
             >
               For over three years, I've hosted a monthly dinner in{" "}
               <em>Bed–Stuy</em> — a long table of eight, a seasonal menu, and
-              an evening to slow down and connect over food and good
-              conversation.
+              an evening to slow down and connect over food, wine, and good
+              conversation. RSVP details go first to the email list.
             </p>
 
             {/* Social proof */}
@@ -122,6 +126,8 @@ export function Hero() {
                   />
                   <input
                     type="email"
+                    aria-label="Email address"
+                    autoComplete="email"
                     name="EMAIL"
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
@@ -137,14 +143,15 @@ export function Hero() {
                   />
                   <button
                     type="submit"
-                    className="shrink-0 px-6 py-3 rounded-full text-[16px] transition-opacity hover:opacity-90"
+                    disabled={isSubmitting}
+                    className="shrink-0 px-6 py-3 rounded-full text-[16px] transition-opacity hover:opacity-90 disabled:opacity-60"
                     style={{
                       fontFamily: "Newsreader, serif",
                       background: "#2a1f16",
                       color: "#f4eee2",
                     }}
                   >
-                    Join the list →
+                    {isSubmitting ? "Joining..." : "Join the list →"}
                   </button>
                 </form>
               )}
@@ -152,7 +159,7 @@ export function Hero() {
                 style={{ fontFamily: "Newsreader, serif", color: "#8c7b6b" }}
                 className="text-[14px] italic mt-2.5 ml-1"
               >
-                One short note a month. No noise.
+                One short note a month. No noise. Unsubscribe anytime.
               </p>
             </div>
           </div>

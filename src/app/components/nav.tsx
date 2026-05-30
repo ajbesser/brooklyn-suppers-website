@@ -34,6 +34,7 @@ export function Nav() {
         <nav className="hidden md:flex items-center gap-8">
           {[
             { label: "About", id: "about" },
+            { label: "Expect", id: "expect" },
             { label: "Menus", id: "menus" },
           ].map(({ label, id }) => (
             <button
@@ -68,7 +69,7 @@ export function Nav() {
           }}
           className="md:hidden text-[15px] font-normal px-4 py-2 rounded-full italic"
         >
-          Come over →
+          Join the list →
         </button>
       </div>
     </header>
