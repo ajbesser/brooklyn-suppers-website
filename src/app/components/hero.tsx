@@ -83,7 +83,7 @@ export function Hero() {
                   </span>
                   {" "}
                   <span
-                    style={{ fontFamily: "Newsreader, serif", color: "#8c7b6b" }}
+                    style={{ fontFamily: "Newsreader, serif", color: "#6f5f51" }}
                     className="text-[15px] ml-1.5"
                   >
                     {label}
@@ -156,7 +156,7 @@ export function Hero() {
                 </form>
               )}
               <p
-                style={{ fontFamily: "Newsreader, serif", color: "#8c7b6b" }}
+                style={{ fontFamily: "Newsreader, serif", color: "#6f5f51" }}
                 className="text-[14px] italic mt-2.5 ml-1"
               >
                 RSVP opens by email first.

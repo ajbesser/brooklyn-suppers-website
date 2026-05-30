@@ -92,7 +92,7 @@ export function WhatToExpect() {
                 same conversation."
               </p>
               <footer
-                style={{ fontFamily: "Kalam, cursive", color: "#8c7b6b" }}
+                style={{ fontFamily: "Kalam, cursive", color: "#6f5f51" }}
                 className="text-[17px] mt-4"
               >
                 — a returning guest

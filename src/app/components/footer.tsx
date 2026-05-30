@@ -42,7 +42,7 @@ export function Footer() {
               hello@brooklynsuppers.com
             </a>
           </p>
-          <p style={{ color: "#8c7b6b" }} className="text-[13px] pt-2">
+          <p style={{ color: "#6f5f51" }} className="text-[13px] pt-2">
             © 2026
           </p>
         </div>

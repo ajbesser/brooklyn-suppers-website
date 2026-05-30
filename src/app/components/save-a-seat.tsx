@@ -66,7 +66,7 @@ export function SaveASeat() {
         <p
           style={{
             fontFamily: "Newsreader, serif",
-            color: "#8c7b6b",
+            color: "#6f5f51",
             fontStyle: "italic",
           }}
           className="text-[15px] mt-8"

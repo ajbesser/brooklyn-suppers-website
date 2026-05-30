@@ -64,7 +64,7 @@ export function About() {
               />
             </div>
             <p
-              style={{ fontFamily: "Kalam, cursive", color: "#8c7b6b" }}
+              style={{ fontFamily: "Kalam, cursive", color: "#6f5f51" }}
               className="text-[17px] ml-1"
             >
               the table, in good company

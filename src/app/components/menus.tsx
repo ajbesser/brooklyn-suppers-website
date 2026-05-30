@@ -44,7 +44,7 @@ function MenuCard({
 }) {
   return (
     <div
-      className="rounded-[12px] overflow-hidden transition-all duration-300 hover:-translate-y-3 hover:scale-[1.03] hover:rotate-[0deg] cursor-pointer"
+      className="rounded-[12px] overflow-hidden transition-all duration-300 hover:-translate-y-3 hover:scale-[1.03] hover:rotate-[0deg]"
       style={{
         background: "rgba(235,226,208,0.55)",
         boxShadow: "0 20px 60px -24px rgba(42,31,22,0.3)",
@@ -72,7 +72,7 @@ function MenuCard({
             {menu.month}
           </span>
           <span
-            style={{ fontFamily: "Newsreader, serif", color: "#8c7b6b", fontStyle: "italic" }}
+            style={{ fontFamily: "Newsreader, serif", color: "#6f5f51", fontStyle: "italic" }}
             className="text-[13px]"
           >
             a Brooklyn Supper
@@ -111,7 +111,7 @@ function MenuCard({
           {menu.courses.map((course, i) => (
             <li key={i} className="flex gap-3 items-start">
               <span
-                style={{ fontFamily: "Newsreader, serif", color: "#8c7b6b" }}
+                style={{ fontFamily: "Newsreader, serif", color: "#6f5f51" }}
                 className="text-[15px] shrink-0 mt-0.5"
               >
                 —
@@ -127,7 +127,7 @@ function MenuCard({
         </ul>
 
         <p
-          style={{ fontFamily: "Kalam, cursive", color: "#8c7b6b" }}
+          style={{ fontFamily: "Kalam, cursive", color: "#6f5f51" }}
           className="text-[16px] mt-6"
         >
           {menu.caption}

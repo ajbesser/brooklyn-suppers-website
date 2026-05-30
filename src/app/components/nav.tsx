@@ -73,7 +73,7 @@ export function Nav() {
           }}
           className="md:hidden text-[15px] font-normal px-4 py-2 rounded-full italic focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#a04e33] focus-visible:ring-offset-4 focus-visible:ring-offset-[#faf6ee]"
         >
-          Hear first about the next supper →
+          Hear first →
         </button>
       </div>
     </header>
