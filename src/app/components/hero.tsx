@@ -40,7 +40,7 @@ export function Hero() {
               style={{ fontFamily: "Kalam, cursive", color: "#a04e33" }}
               className="text-[22px] mb-3 -ml-0.5"
             >
-              Brooklyn Suppers
+              welcome —
             </p>
 
             <h1
