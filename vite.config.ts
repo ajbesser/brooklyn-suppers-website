@@ -34,11 +34,13 @@ export default defineConfig({
   // File types to support raw imports. Never add .css, .tsx, or .ts files to this.
   assetsInclude: ['**/*.svg', '**/*.csv'],
 
-  // Allow Railway domain for production preview
+  // Allow Railway domain and custom domain for production preview
   preview: {
     allowedHosts: [
       'brooklyn-suppers-website-production.up.railway.app',
       '.railway.app', // Allow all Railway domains
+      'brooklynsuppers.com',
+      'www.brooklynsuppers.com',
     ],
   },
 })
