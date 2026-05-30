@@ -24,9 +24,10 @@ export function Nav() {
     >
       <div className="max-w-[960px] mx-auto px-6 h-14 flex items-center justify-between">
         <button
+          type="button"
           onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
           style={{ fontFamily: "Newsreader, serif", color: "#2a1f16" }}
-          className="text-[18px] font-normal tracking-tight"
+          className="text-[18px] font-normal tracking-tight rounded-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#a04e33] focus-visible:ring-offset-4 focus-visible:ring-offset-[#faf6ee]"
         >
           Brooklyn Suppers
         </button>
@@ -38,36 +39,39 @@ export function Nav() {
             { label: "Menus", id: "menus" },
           ].map(({ label, id }) => (
             <button
+              type="button"
               key={id}
               onClick={() => scrollTo(id)}
               style={{ fontFamily: "Newsreader, serif", color: "#574638" }}
-              className="text-[16px] font-normal hover:text-[#2a1f16] transition-colors"
+              className="text-[16px] font-normal hover:text-[#2a1f16] transition-colors rounded-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#a04e33] focus-visible:ring-offset-4 focus-visible:ring-offset-[#faf6ee]"
             >
               {label}
             </button>
           ))}
           <button
+            type="button"
             onClick={() => scrollTo("save-a-seat")}
             style={{
               fontFamily: "Newsreader, serif",
               background: "#2a1f16",
               color: "#f4eee2",
             }}
-            className="text-[16px] font-normal px-5 py-2 rounded-full hover:opacity-90 transition-opacity italic"
+            className="text-[16px] font-normal px-5 py-2 rounded-full hover:opacity-90 transition-opacity italic focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#a04e33] focus-visible:ring-offset-4 focus-visible:ring-offset-[#faf6ee]"
           >
-            Come over →
+            Hear first →
           </button>
         </nav>
 
         {/* Mobile: just the CTA */}
         <button
+          type="button"
           onClick={() => scrollTo("save-a-seat")}
           style={{
             fontFamily: "Newsreader, serif",
             background: "#2a1f16",
             color: "#f4eee2",
           }}
-          className="md:hidden text-[15px] font-normal px-4 py-2 rounded-full italic"
+          className="md:hidden text-[15px] font-normal px-4 py-2 rounded-full italic focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#a04e33] focus-visible:ring-offset-4 focus-visible:ring-offset-[#faf6ee]"
         >
           Hear first about the next supper →
         </button>

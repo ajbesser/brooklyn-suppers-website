@@ -1,4 +1,4 @@
-import imgMayPhoto from "figma:asset/96badee1e513008ebf5530cdd0f07ca6fdd47237.png";
+import imgMayPhoto from "@/assets/96badee1e513008ebf5530cdd0f07ca6fdd47237.jpg";
 
 const mayMenu = {
   month: "May",
@@ -55,6 +55,8 @@ function MenuCard({
           <img
             src={photo}
             alt="A recent Brooklyn Suppers menu"
+            loading="lazy"
+            decoding="async"
             className="w-full h-full object-cover transition-transform duration-300 hover:scale-105"
           />
         </div>

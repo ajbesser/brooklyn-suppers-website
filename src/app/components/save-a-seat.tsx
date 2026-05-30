@@ -51,8 +51,9 @@ export function SaveASeat() {
         </div>
 
         <button
+          type="button"
           onClick={scrollToHero}
-          className="inline-flex items-center gap-2 px-8 py-4 rounded-full text-[17px] transition-all hover:scale-105 hover:shadow-lg"
+          className="inline-flex items-center gap-2 px-8 py-4 rounded-full text-[17px] transition-all hover:scale-105 hover:shadow-lg focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#a04e33] focus-visible:ring-offset-4 focus-visible:ring-offset-[#faf6ee]"
           style={{
             fontFamily: "Newsreader, serif",
             background: "#2a1f16",

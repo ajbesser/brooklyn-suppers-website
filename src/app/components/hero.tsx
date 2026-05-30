@@ -1,6 +1,6 @@
 import { useState } from "react";
-import imgPeople from "figma:asset/2108354b80ceaa608fa1fc4709e4197af793e1cb.png";
-import imgFood from "figma:asset/9e68f8793e6f67c0fd5130f78ea97da9bed1c275.png";
+import imgPeople from "@/assets/2108354b80ceaa608fa1fc4709e4197af793e1cb.jpg";
+import imgFood from "@/assets/9e68f8793e6f67c0fd5130f78ea97da9bed1c275.jpg";
 
 export function Hero() {
   const [email, setEmail] = useState("");
@@ -81,6 +81,7 @@ export function Hero() {
                   >
                     {stat}
                   </span>
+                  {" "}
                   <span
                     style={{ fontFamily: "Newsreader, serif", color: "#8c7b6b" }}
                     className="text-[15px] ml-1.5"
@@ -132,7 +133,7 @@ export function Hero() {
                     onChange={(e) => setEmail(e.target.value)}
                     placeholder="your@email.com"
                     required
-                    className="flex-1 min-w-0 px-4 py-3 rounded-full text-[16px] outline-none"
+                    className="flex-1 min-w-0 px-4 py-3 rounded-full text-[16px] outline-none focus-visible:ring-2 focus-visible:ring-[#a04e33] focus-visible:ring-offset-2 focus-visible:ring-offset-[#faf6ee]"
                     style={{
                       fontFamily: "Newsreader, serif",
                       background: "rgba(235,226,208,0.5)",
@@ -143,7 +144,7 @@ export function Hero() {
                   <button
                     type="submit"
                     disabled={isSubmitting}
-                    className="shrink-0 px-6 py-3 rounded-full text-[16px] transition-opacity hover:opacity-90 disabled:opacity-60"
+                    className="shrink-0 px-6 py-3 rounded-full text-[16px] transition-opacity hover:opacity-90 disabled:opacity-60 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#a04e33] focus-visible:ring-offset-2 focus-visible:ring-offset-[#faf6ee]"
                     style={{
                       fontFamily: "Newsreader, serif",
                       background: "#2a1f16",
@@ -172,6 +173,7 @@ export function Hero() {
               <img
                 src={imgPeople}
                 alt="Guests around the table at a Brooklyn Supper"
+                decoding="async"
                 className="w-full h-full object-cover"
               />
             </div>
@@ -183,6 +185,8 @@ export function Hero() {
               <img
                 src={imgFood}
                 alt="A dish from the table"
+                loading="lazy"
+                decoding="async"
                 className="w-full h-full object-cover"
               />
             </div>
@@ -194,6 +198,7 @@ export function Hero() {
           <img
             src={imgPeople}
             alt="Guests around the table at a Brooklyn Supper"
+            decoding="async"
             className="w-full h-full object-cover"
           />
         </div>

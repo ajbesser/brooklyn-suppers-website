@@ -58,6 +58,8 @@ export function About() {
               <img
                 src={imgDinner}
                 alt="A warm dinner gathering in Bed-Stuy"
+                loading="lazy"
+                decoding="async"
                 className="w-full h-full object-cover"
               />
             </div>
