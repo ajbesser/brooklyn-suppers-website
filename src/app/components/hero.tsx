@@ -164,18 +164,28 @@ export function Hero() {
             </div>
           </div>
 
-          {/* Right: photos stacked with offset */}
+          {/* Right: video and photos stacked with offset */}
           <div className="relative hidden md:block" style={{ height: "520px" }}>
             <div
               className="absolute inset-0 rounded-[12px] overflow-hidden shadow-[0_24px_64px_-16px_rgba(42,31,22,0.3)] transition-transform duration-300 hover:scale-[1.02]"
               style={{ top: "20px", right: "0", left: "24px" }}
             >
-              <img
-                src={imgPeople}
-                alt="Guests around the table at a Brooklyn Supper"
-                decoding="async"
+              <video
+                autoPlay
+                loop
+                muted
+                playsInline
+                poster="/hero-poster.jpg"
                 className="w-full h-full object-cover"
-              />
+                aria-label="Video of guests around the table at a Brooklyn Supper"
+              >
+                <source src="/hero-video.mp4" type="video/mp4" />
+                <img
+                  src={imgPeople}
+                  alt="Guests around the table at a Brooklyn Supper"
+                  className="w-full h-full object-cover"
+                />
+              </video>
             </div>
             {/* Small accent photo */}
             <div
@@ -193,14 +203,24 @@ export function Hero() {
           </div>
         </div>
 
-        {/* Mobile image */}
+        {/* Mobile video */}
         <div className="md:hidden mt-10 rounded-[12px] overflow-hidden shadow-[0_20px_60px_-20px_rgba(42,31,22,0.3)] h-[260px]">
-          <img
-            src={imgPeople}
-            alt="Guests around the table at a Brooklyn Supper"
-            decoding="async"
+          <video
+            autoPlay
+            loop
+            muted
+            playsInline
+            poster="/hero-poster.jpg"
             className="w-full h-full object-cover"
-          />
+            aria-label="Video of guests around the table at a Brooklyn Supper"
+          >
+            <source src="/hero-video.mp4" type="video/mp4" />
+            <img
+              src={imgPeople}
+              alt="Guests around the table at a Brooklyn Supper"
+              className="w-full h-full object-cover"
+            />
+          </video>
         </div>
       </div>
     </section>
