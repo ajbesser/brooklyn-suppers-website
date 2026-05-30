@@ -71,7 +71,7 @@ export function Hero() {
             >
               {[
                 { stat: "22", label: "dinners hosted" },
-                { stat: "8", label: "seats at the table" },
+                { stat: "150+", label: "new and returning attendees" },
                 { stat: "Monthly", label: "when the calendar allows" },
               ].map(({ stat, label }) => (
                 <div key={stat}>
