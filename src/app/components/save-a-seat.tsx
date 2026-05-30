@@ -59,7 +59,7 @@ export function SaveASeat() {
             color: "#f4eee2",
           }}
         >
-          Join the email list →
+          Hear first about the next supper →
         </button>
 
         <p

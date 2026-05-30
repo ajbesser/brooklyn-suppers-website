@@ -97,7 +97,7 @@ export function Hero() {
                 style={{ fontFamily: "Kalam, cursive", color: "#a04e33" }}
                 className="text-[18px] mb-3"
               >
-                Join the mailing list
+                Hear first about the next supper
               </p>
               {submitted ? (
                 <p
@@ -150,7 +150,7 @@ export function Hero() {
                       color: "#f4eee2",
                     }}
                   >
-                    {isSubmitting ? "Joining..." : "Join the list →"}
+                    {isSubmitting ? "Joining..." : "Hear first →"}
                   </button>
                 </form>
               )}
@@ -158,7 +158,7 @@ export function Hero() {
                 style={{ fontFamily: "Newsreader, serif", color: "#8c7b6b" }}
                 className="text-[14px] italic mt-2.5 ml-1"
               >
-                Get first access when the next RSVP opens.
+                RSVP opens by email first.
               </p>
             </div>
           </div>

@@ -69,7 +69,7 @@ export function Nav() {
           }}
           className="md:hidden text-[15px] font-normal px-4 py-2 rounded-full italic"
         >
-          Join the list →
+          Hear first about the next supper →
         </button>
       </div>
     </header>
