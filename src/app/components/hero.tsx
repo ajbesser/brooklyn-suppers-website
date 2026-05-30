@@ -5,6 +5,7 @@ import imgFood from "figma:asset/9e68f8793e6f67c0fd5130f78ea97da9bed1c275.png";
 export function Hero() {
   const [email, setEmail] = useState("");
   const [submitted, setSubmitted] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -12,6 +13,7 @@ export function Hero() {
 
     // Submit to Mailchimp
     const form = e.target as HTMLFormElement;
+    setIsSubmitting(true);
     try {
       await fetch(form.action, {
         method: 'POST',
@@ -22,6 +24,8 @@ export function Hero() {
     } catch (error) {
       // Even if fetch fails due to CORS, the form still submits successfully
       setSubmitted(true);
+    } finally {
+      setIsSubmitting(false);
     }
   };
 
@@ -36,7 +40,7 @@ export function Hero() {
               style={{ fontFamily: "Kalam, cursive", color: "#a04e33" }}
               className="text-[22px] mb-3 -ml-0.5"
             >
-              welcome —
+              Brooklyn Suppers
             </p>
 
             <h1
@@ -48,17 +52,16 @@ export function Hero() {
               }}
               className="text-[clamp(52px,7vw,76px)] font-normal mb-6"
             >
-              Come eat with us.
+              Grab a seat for the next supper.
             </h1>
 
             <p
               style={{ fontFamily: "Newsreader, serif", color: "#574638", lineHeight: "1.7" }}
               className="text-[18px] mb-8"
             >
-              For over three years, I've hosted a monthly dinner in{" "}
-              <em>Bed–Stuy</em> — a long table of eight, a seasonal menu, and
-              an evening to slow down and connect over food and good
-              conversation.
+              A monthly dinner club built around a long table, seasonal
+              cooking, wine, and good conversation. RSVP opens by email first,
+              with each menu shaped closer to the date.
             </p>
 
             {/* Social proof */}
@@ -67,9 +70,9 @@ export function Hero() {
               style={{ borderBottom: "1px solid rgba(42,31,22,0.12)" }}
             >
               {[
-                { stat: "40+", label: "dinners hosted" },
-                { stat: "300+", label: "strangers turned friends" },
-                { stat: "Since 2022", label: "in Bed–Stuy" },
+                { stat: "22", label: "dinners hosted" },
+                { stat: "8", label: "seats at the table" },
+                { stat: "Monthly", label: "when the calendar allows" },
               ].map(({ stat, label }) => (
                 <div key={stat}>
                   <span
@@ -94,7 +97,7 @@ export function Hero() {
                 style={{ fontFamily: "Kalam, cursive", color: "#a04e33" }}
                 className="text-[18px] mb-3"
               >
-                hear about the next one
+                Hear first about the next supper
               </p>
               {submitted ? (
                 <p
@@ -122,6 +125,8 @@ export function Hero() {
                   />
                   <input
                     type="email"
+                    aria-label="Email address"
+                    autoComplete="email"
                     name="EMAIL"
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
@@ -137,14 +142,15 @@ export function Hero() {
                   />
                   <button
                     type="submit"
-                    className="shrink-0 px-6 py-3 rounded-full text-[16px] transition-opacity hover:opacity-90"
+                    disabled={isSubmitting}
+                    className="shrink-0 px-6 py-3 rounded-full text-[16px] transition-opacity hover:opacity-90 disabled:opacity-60"
                     style={{
                       fontFamily: "Newsreader, serif",
                       background: "#2a1f16",
                       color: "#f4eee2",
                     }}
                   >
-                    Join the list →
+                    {isSubmitting ? "Joining..." : "Hear first →"}
                   </button>
                 </form>
               )}
@@ -152,7 +158,7 @@ export function Hero() {
                 style={{ fontFamily: "Newsreader, serif", color: "#8c7b6b" }}
                 className="text-[14px] italic mt-2.5 ml-1"
               >
-                One short note a month. No noise.
+                RSVP opens by email first.
               </p>
             </div>
           </div>

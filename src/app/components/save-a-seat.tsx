@@ -10,7 +10,7 @@ export function SaveASeat() {
           style={{ fontFamily: "Kalam, cursive", color: "#a04e33" }}
           className="text-[22px] mb-4"
         >
-          come over
+          RSVP
         </p>
 
         <h2
@@ -30,15 +30,23 @@ export function SaveASeat() {
           className="text-[18px] space-y-5 mb-10"
         >
           <p>
-            RSVP opens monthly via email to our mailing list. Each dinner is
-            unique — with details about the menu, date, and theme sent directly
-            to subscribers when seats become available.
+            RSVP opens monthly, with the email list getting first access. Each
+            dinner is unique, with menus decided closer to the date based on
+            guest preferences and what is in peak season. The full RSVP asks
+            for dietary notes, guest count, and anything helpful to know before
+            you come over.
           </p>
 
           <p>
             Dinners are limited to eight guests, so spots fill quickly. Join
             the list below to be the first to know when the next dinner is
-            announced.
+            announced. The apartment address is shared after a seat is
+            confirmed, not on the public site.
+          </p>
+
+          <p>
+            If the table is full, you'll stay on the list for the next opening.
+            You'll hear when there is a new dinner to gather around.
           </p>
         </div>
 
@@ -51,7 +59,7 @@ export function SaveASeat() {
             color: "#f4eee2",
           }}
         >
-          Join the email list →
+          Hear first about the next supper →
         </button>
 
         <p

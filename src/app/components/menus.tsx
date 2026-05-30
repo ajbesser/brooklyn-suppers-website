@@ -2,10 +2,10 @@ import imgMayPhoto from "figma:asset/96badee1e513008ebf5530cdd0f07ca6fdd47237.pn
 
 const mayMenu = {
   month: "May",
-  theme: "Spain & Portugal",
-  wines: "with vermouth, sherry, Iberian whites",
-  note: "Built around the arrival of ramps, fava beans, spring onions, and young potatoes.",
-  caption: "basque cheesecake, just before",
+  theme: "A spring table",
+  wines: "with paired wines",
+  note: "Built around what was best at the market and what made sense for the guests at the table.",
+  caption: "dessert, just before",
   courses: [
     "Mussels escabeche",
     "Patatas fritas con jamón ibérico y piparras",
@@ -19,10 +19,10 @@ const mayMenu = {
 
 const aprilMenu = {
   month: "April",
-  theme: "Southern",
-  wines: "with champagne and sparkling wines",
-  note: "A classic Southern menu drawn from Edna Lewis, Scott Peacock, and Sean Brock — Southern dishes you don't see often in New York.",
-  caption: "cooked with @ajbesser",
+  theme: "A late spring dinner",
+  wines: "with paired wines",
+  note: "A slow, generous menu with a few things to start, a shared main course, sides, and dessert.",
+  caption: "from the table",
   courses: [
     "Pimento cheese and crackers",
     "Fennel pickled shrimp",
@@ -54,7 +54,7 @@ function MenuCard({
         <div className="h-[240px] overflow-hidden">
           <img
             src={photo}
-            alt={`${menu.theme} menu`}
+            alt="A recent Brooklyn Suppers menu"
             className="w-full h-full object-cover transition-transform duration-300 hover:scale-105"
           />
         </div>
@@ -162,8 +162,8 @@ export function Menus() {
             style={{ fontFamily: "Newsreader, serif", color: "#574638", lineHeight: "1.65" }}
             className="text-[18px]"
           >
-            A look at the last couple of dinners — to give you a sense of how a
-            typical evening goes.
+            A look at the shape of a recent dinner — to give you a sense of how
+            a typical evening goes.
           </p>
         </div>
 

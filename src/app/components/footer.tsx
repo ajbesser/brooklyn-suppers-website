@@ -16,13 +16,7 @@ export function Footer() {
             style={{ fontFamily: "Newsreader, serif", color: "#574638", fontStyle: "italic" }}
             className="text-[15px] mb-1"
           >
-            A long dinner, once a month, in Bed–Stuy. Hosted since 2022.
-          </p>
-          <p
-            style={{ fontFamily: "Kalam, cursive", color: "#8c7b6b" }}
-            className="text-[16px]"
-          >
-            — formerly Family Meal
+            A long dinner, once a month, in Brooklyn.
           </p>
         </div>
 
