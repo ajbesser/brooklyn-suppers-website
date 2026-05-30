@@ -52,7 +52,7 @@ export function Hero() {
               }}
               className="text-[clamp(52px,7vw,76px)] font-normal mb-6"
             >
-              Come eat with us.
+              Grab a seat for the next supper.
             </h1>
 
             <p
