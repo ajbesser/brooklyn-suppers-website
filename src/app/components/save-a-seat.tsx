@@ -10,7 +10,7 @@ export function SaveASeat() {
           style={{ fontFamily: "Kalam, cursive", color: "#a04e33" }}
           className="text-[22px] mb-4"
         >
-          come over
+          RSVP
         </p>
 
         <h2
@@ -30,11 +30,11 @@ export function SaveASeat() {
           className="text-[18px] space-y-5 mb-10"
         >
           <p>
-            RSVP opens monthly via email to our mailing list. Each dinner is
-            unique — with details about the menu, date, and theme sent directly
-            to subscribers when seats become available. The full RSVP asks for
-            dietary notes, guest count, and anything helpful to know before you
-            come over.
+            RSVP opens monthly, with the email list getting first access. Each
+            dinner is unique, with menus decided closer to the date based on
+            guest preferences and what is in peak season. The full RSVP asks
+            for dietary notes, guest count, and anything helpful to know before
+            you come over.
           </p>
 
           <p>
@@ -46,8 +46,7 @@ export function SaveASeat() {
 
           <p>
             If the table is full, you'll stay on the list for the next opening.
-            No pressure, no spam, just a monthly note when there is something
-            to gather around.
+            You'll hear when there is a new dinner to gather around.
           </p>
         </div>
 

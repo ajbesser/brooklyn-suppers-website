@@ -32,22 +32,19 @@ export function About() {
               className="text-[18px] space-y-5"
             >
               <p>
-                Brooklyn Suppers (formerly Family Meal) started a little over three
-                years ago as a way to build community and bring people together over
-                food and thoughtful conversation. It's grown into a monthly rhythm I
-                look forward to every month.
+                Brooklyn Suppers started a little over three years ago as a way
+                to bring people together over food and thoughtful conversation.
+                It's grown into a monthly rhythm I look forward to every month.
               </p>
               <p>
-                Each dinner has a theme. Sometimes it's a region — a
-                Spanish-and-Portuguese evening with vermouth and paella, or a
-                Southern menu drawn from Edna Lewis and Sean Brock. Sometimes it's a
-                season — the first ramps and fava beans of spring, or whatever's peak
-                at the market that week.
+                Each dinner is different. Menus come together close to the date,
+                guided by guest preferences, what is in peak season, and what
+                feels right for the table.
               </p>
               <p>
                 Eight chairs around one table. Three or four courses, paced slowly.
-                Wine pairings throughout. You arrive around seven and most people
-                don't leave until midnight.
+                Wine pairings throughout. The point is a generous evening with
+                enough time for the meal and the conversation to unfold.
               </p>
             </div>
           </div>

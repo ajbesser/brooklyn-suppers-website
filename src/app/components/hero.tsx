@@ -40,7 +40,7 @@ export function Hero() {
               style={{ fontFamily: "Kalam, cursive", color: "#a04e33" }}
               className="text-[22px] mb-3 -ml-0.5"
             >
-              welcome —
+              Brooklyn Suppers
             </p>
 
             <h1
@@ -59,10 +59,9 @@ export function Hero() {
               style={{ fontFamily: "Newsreader, serif", color: "#574638", lineHeight: "1.7" }}
               className="text-[18px] mb-8"
             >
-              For over three years, I've hosted a monthly dinner in{" "}
-              <em>Bed–Stuy</em> — a long table of eight, a seasonal menu, and
-              an evening to slow down and connect over food, wine, and good
-              conversation. RSVP details go first to the email list.
+              A monthly dinner club built around a long table, seasonal
+              cooking, wine, and good conversation. RSVP opens by email first,
+              with each menu shaped closer to the date.
             </p>
 
             {/* Social proof */}
@@ -71,9 +70,9 @@ export function Hero() {
               style={{ borderBottom: "1px solid rgba(42,31,22,0.12)" }}
             >
               {[
-                { stat: "40+", label: "dinners hosted" },
-                { stat: "300+", label: "strangers turned friends" },
-                { stat: "Since 2022", label: "in Bed–Stuy" },
+                { stat: "22", label: "dinners hosted" },
+                { stat: "8", label: "seats at the table" },
+                { stat: "Monthly", label: "when the calendar allows" },
               ].map(({ stat, label }) => (
                 <div key={stat}>
                   <span
@@ -98,7 +97,7 @@ export function Hero() {
                 style={{ fontFamily: "Kalam, cursive", color: "#a04e33" }}
                 className="text-[18px] mb-3"
               >
-                hear about the next one
+                Join the mailing list
               </p>
               {submitted ? (
                 <p
@@ -159,7 +158,7 @@ export function Hero() {
                 style={{ fontFamily: "Newsreader, serif", color: "#8c7b6b" }}
                 className="text-[14px] italic mt-2.5 ml-1"
               >
-                One short note a month. No noise. Unsubscribe anytime.
+                Get first access when the next RSVP opens.
               </p>
             </div>
           </div>

@@ -1,10 +1,10 @@
 const items = [
   {
-    bold: "7pm-ish.",
-    rest: "Come hungry. There's usually bread and something to start.",
+    bold: "Come hungry.",
+    rest: " There's usually bread and something to start.",
   },
   {
-    bold: "A themed menu",
+    bold: "A seasonal menu",
     rest: ", three or four courses, served family-style.",
   },
   {
@@ -12,8 +12,8 @@ const items = [
     rest: " throughout. Bring a bottle if you'd like to share.",
   },
   {
-    bold: "Around midnight,",
-    rest: " the last of us are still at the table. No rush.",
+    bold: "A slow dinner,",
+    rest: " with time to settle in and let the evening unfold.",
   },
   {
     bold: "Bed–Stuy,",
@@ -88,8 +88,8 @@ export function WhatToExpect() {
                 }}
                 className="text-[22px]"
               >
-                "You arrive as a stranger and leave feeling like you've known
-                everyone at the table for years. That's the whole point."
+                "The table is small enough that everyone gets folded into the
+                same conversation."
               </p>
               <footer
                 style={{ fontFamily: "Kalam, cursive", color: "#8c7b6b" }}
