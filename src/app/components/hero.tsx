@@ -60,8 +60,7 @@ export function Hero() {
               className="text-[18px] mb-8"
             >
               A monthly dinner club built around a long table, seasonal
-              cooking, wine, and good conversation. RSVP opens by email first,
-              with each menu shaped closer to the date.
+              cooking, wine, and good conversation.
             </p>
 
             {/* Social proof */}
@@ -72,7 +71,6 @@ export function Hero() {
               {[
                 { stat: "22", label: "dinners hosted" },
                 { stat: "150+", label: "new and returning attendees" },
-                { stat: "Monthly", label: "when the calendar allows" },
               ].map(({ stat, label }) => (
                 <div key={stat}>
                   <span

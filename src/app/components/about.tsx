@@ -37,9 +37,8 @@ export function About() {
                 It's grown into a monthly rhythm I look forward to every month.
               </p>
               <p>
-                Each dinner is different. Menus come together close to the date,
-                guided by guest preferences, what is in peak season, and what
-                feels right for the table.
+                Each dinner is different. Menus are guided by what is in peak
+                season, and what feels right for the table.
               </p>
               <p>
                 Eight chairs around one table. Three or four courses, paced slowly.
