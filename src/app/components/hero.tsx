@@ -30,14 +30,14 @@ export function Hero() {
   };
 
   return (
-    <section className="pt-28 pb-20 px-6" style={{ background: "#3a2b1f" }}>
+    <section className="pt-28 pb-20 px-6" style={{ background: "#d4c4ad" }}>
       <div className="max-w-[960px] mx-auto">
         {/* Two-column layout */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-16 items-center">
           {/* Left: copy */}
           <div>
             <p
-              style={{ fontFamily: "Kalam, cursive", color: "#d97854" }}
+              style={{ fontFamily: "Kalam, cursive", color: "#a04e33" }}
               className="text-[22px] mb-3 -ml-0.5"
             >
               welcome —
@@ -46,7 +46,7 @@ export function Hero() {
             <h1
               style={{
                 fontFamily: "Newsreader, serif",
-                color: "#faf6ee",
+                color: "#2a1f16",
                 letterSpacing: "-1.8px",
                 lineHeight: "1.02",
               }}
@@ -56,7 +56,7 @@ export function Hero() {
             </h1>
 
             <p
-              style={{ fontFamily: "Newsreader, serif", color: "#e8dcc8", lineHeight: "1.7" }}
+              style={{ fontFamily: "Newsreader, serif", color: "#4a3a2a", lineHeight: "1.7" }}
               className="text-[18px] mb-8"
             >
               A monthly dinner club built around a long table, seasonal
@@ -67,7 +67,7 @@ export function Hero() {
             {/* Social proof */}
             <div
               className="flex flex-wrap gap-x-6 gap-y-2 mb-10 pb-10"
-              style={{ borderBottom: "1px solid rgba(244,238,226,0.2)" }}
+              style={{ borderBottom: "1px solid rgba(42,31,22,0.15)" }}
             >
               {[
                 { stat: "22", label: "dinners hosted" },
@@ -76,14 +76,14 @@ export function Hero() {
               ].map(({ stat, label }) => (
                 <div key={stat}>
                   <span
-                    style={{ fontFamily: "Newsreader, serif", color: "#faf6ee" }}
+                    style={{ fontFamily: "Newsreader, serif", color: "#2a1f16" }}
                     className="text-[20px] font-normal"
                   >
                     {stat}
                   </span>
                   {" "}
                   <span
-                    style={{ fontFamily: "Newsreader, serif", color: "#c4b5a0" }}
+                    style={{ fontFamily: "Newsreader, serif", color: "#6f5f51" }}
                     className="text-[15px] ml-1.5"
                   >
                     {label}
@@ -95,14 +95,14 @@ export function Hero() {
             {/* Primary CTA — email signup */}
             <div>
               <p
-                style={{ fontFamily: "Kalam, cursive", color: "#d97854" }}
+                style={{ fontFamily: "Kalam, cursive", color: "#a04e33" }}
                 className="text-[18px] mb-3"
               >
                 Hear first about the next supper
               </p>
               {submitted ? (
                 <p
-                  style={{ fontFamily: "Newsreader, serif", color: "#e8dcc8", lineHeight: "1.6" }}
+                  style={{ fontFamily: "Newsreader, serif", color: "#4a3a2a", lineHeight: "1.6" }}
                   className="text-[17px] italic"
                 >
                   You're on the list. I'll be in touch when the next dinner is set. ✦
@@ -133,22 +133,22 @@ export function Hero() {
                     onChange={(e) => setEmail(e.target.value)}
                     placeholder="your@email.com"
                     required
-                    className="flex-1 min-w-0 px-4 py-3 rounded-full text-[16px] outline-none focus-visible:ring-2 focus-visible:ring-[#d97854] focus-visible:ring-offset-2 focus-visible:ring-offset-[#3a2b1f]"
+                    className="flex-1 min-w-0 px-4 py-3 rounded-full text-[16px] outline-none focus-visible:ring-2 focus-visible:ring-[#a04e33] focus-visible:ring-offset-2 focus-visible:ring-offset-[#d4c4ad]"
                     style={{
                       fontFamily: "Newsreader, serif",
-                      background: "rgba(250,246,238,0.95)",
-                      border: "1px solid rgba(250,246,238,0.3)",
+                      background: "rgba(250,246,238,0.6)",
+                      border: "1px solid rgba(42,31,22,0.2)",
                       color: "#2a1f16",
                     }}
                   />
                   <button
                     type="submit"
                     disabled={isSubmitting}
-                    className="shrink-0 px-6 py-3 rounded-full text-[16px] transition-all hover:opacity-90 hover:scale-[1.02] disabled:opacity-60 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#d97854] focus-visible:ring-offset-2 focus-visible:ring-offset-[#3a2b1f]"
+                    className="shrink-0 px-6 py-3 rounded-full text-[16px] transition-all hover:opacity-90 hover:scale-[1.02] disabled:opacity-60 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#a04e33] focus-visible:ring-offset-2 focus-visible:ring-offset-[#d4c4ad]"
                     style={{
                       fontFamily: "Newsreader, serif",
-                      background: "#faf6ee",
-                      color: "#2a1f16",
+                      background: "#2a1f16",
+                      color: "#f4eee2",
                     }}
                   >
                     {isSubmitting ? "Joining..." : "Hear first →"}
@@ -156,7 +156,7 @@ export function Hero() {
                 </form>
               )}
               <p
-                style={{ fontFamily: "Newsreader, serif", color: "#c4b5a0" }}
+                style={{ fontFamily: "Newsreader, serif", color: "#6f5f51" }}
                 className="text-[14px] italic mt-2.5 ml-1"
               >
                 RSVP opens by email first.
